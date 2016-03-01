@@ -25,7 +25,7 @@ Be sure to use the latest version of node.js with npm.
 Have a look at the `package.json`.
 
 ## Outlook
-* The components could distributed as separated modules through npm.
+* The components could be distributed as separated modules through npm.
 
 ## Props
 
