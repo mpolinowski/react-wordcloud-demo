@@ -1,0 +1,18 @@
+
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/no-did-mount-set-state": 0,
+    "valid-jsdoc": 1,
+    // Disable until Flow supports let and const
+    "no-var": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-no-undef": 2,
+    "react/wrap-multilines": 2,
+    "no-unused-vars": 1,
+    "no-console": 1
+  },
+  "plugins": [
+    "react"
+  ]
+}

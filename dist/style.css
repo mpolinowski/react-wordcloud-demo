@@ -1,0 +1,40 @@
+body {
+  min-width: 500px;
+}
+.wordcloud {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.wordcloud__title {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+.wordcloud__cloud {
+  border: 1px solid #888;
+  max-width: 100%;
+  flex: 0 0 400px;
+  text-align: center;
+}
+.wordcloud__sidebar {
+  border: 1px solid #888;
+  flex: 1 1 15rem;
+  text-align: left;
+}
+
+.wordcloud__cloud_label:hover {
+  cursor: pointer;
+}
+.wordcloud__cloud_label--is-active {
+  text-decoration: underline;
+}
+.wordcloud__cloud_label--color-grey {
+  fill: grey;
+}
+.wordcloud__cloud_label--color-green {
+  fill: green;
+}
+.wordcloud__cloud_label--color-red {
+  fill: red;
+}
