@@ -1,5 +1,6 @@
 # react-demo-wordcloud
 
+[![Build Status](https://travis-ci.com/Purii/react-demo-wordcloud.svg?token=qdXLSA5Q7qrhqsnmh1sw&branch=master)](https://travis-ci.com/Purii/react-demo-wordcloud)
 ![Dependencies](https://img.shields.io/david/purii/wordcloud.svg?style=flat)
 ![devDependencies](https://img.shields.io/david/dev/purii/wordcloud.svg?style=flat)
 
