@@ -4,6 +4,8 @@
   "rules": {
     "react/no-did-mount-set-state": 0,
     "valid-jsdoc": 1,
+    "react/jsx-no-bind": 0,
+    "max-len": 1,
     // Disable until Flow supports let and const
     "no-var": 0,
     "react/jsx-uses-react": 1,
