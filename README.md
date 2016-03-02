@@ -55,4 +55,4 @@ Have a look at the `package.json`.
 ### Sidebar
 | Prop  | Default | Type | Description |
 | :------------ | :---------------:| :---------------:| ---------------|
-| topic | - | `object` | Topic object |
+| topic | `null` | `object` | Topic object |
