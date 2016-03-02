@@ -99,24 +99,26 @@ export default class Cloud extends Component {
     };
 
     return (
-      <div className="wordcloud__cloud">
-        <svg width={width} height={height}>
-          <g transform={`translate(${width / 2}, ${height / 2})`}>
-            {this.state.cloudDimensions.map(item =>
-              <text
-                className={getClassNames(item)}
-                key={item.id}
-                onClick={() => onSelectTopic(item)}
-                style={{
-                  fontSize: item.size,
-                  fontFamily: fontName,
-                }}
-                textAnchor="middle"
-                transform={`translate(${item.x} , ${item.y} )`}
-              >{item.text}</text>
-            )}
-          </g>
-        </svg>
+      <div className="wordcloud__container_cloud">
+        <div className="wordcloud__cloud">
+          <svg width={width} height={height}>
+            <g transform={`translate(${width / 2}, ${height / 2})`}>
+              {this.state.cloudDimensions.map(item =>
+                <text
+                  className={getClassNames(item)}
+                  key={item.id}
+                  onClick={() => onSelectTopic(item)}
+                  style={{
+                    fontSize: item.size,
+                    fontFamily: fontName,
+                  }}
+                  textAnchor="middle"
+                  transform={`translate(${item.x} , ${item.y} )`}
+                >{item.text}</text>
+              )}
+            </g>
+          </svg>
+        </div>
       </div>
     );
   }
