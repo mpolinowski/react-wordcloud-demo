@@ -3,6 +3,16 @@ import React, {
   PropTypes,
 } from 'react';
 
+/**
+ * Import styles
+ * Could be splitted into components
+ */
+import 'normalize.css';
+import './WordCloud.css';
+
+/**
+ * Import Elements
+ */
 import Cloud from '../components/Cloud';
 import Sidebar from '../components/Sidebar';
 

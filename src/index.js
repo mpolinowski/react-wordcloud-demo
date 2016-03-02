@@ -1,9 +1,3 @@
-import 'babel-polyfill';
-import React from 'react';
-import { render } from 'react-dom';
-import App from './containers/App';
-
-render(
-  <App />,
-  document.getElementById('root')
-);
+export { default as WordCloud } from './containers/WordCloud';
+export { default as Cloud } from './components/Cloud';
+export { default as Sidebar } from './components/Sidebar';

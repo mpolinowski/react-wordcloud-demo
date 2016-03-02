@@ -1,13 +1,14 @@
+import 'babel-polyfill';
 import React, {
   Component,
 } from 'react';
-
-import WordCloud from './WordCloud';
+import { render } from 'react-dom';
+import { WordCloud } from '../src/index';
 
 /**
- * Just for demo purposes
+ * Just for demo and development purposes
  */
-export default class App extends Component {
+class App extends Component {
 
   /**
    * Set initial state of component
@@ -58,3 +59,8 @@ export default class App extends Component {
     );
   }
 }
+
+render(
+  <App />,
+  document.getElementById('root')
+);

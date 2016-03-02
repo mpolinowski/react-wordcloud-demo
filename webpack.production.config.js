@@ -3,10 +3,9 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './example/App',
+  entry: './src/index',
   output: {
-    path: path.join(__dirname, 'example/'),
-    publicPath: '/static/',
+    path: path.join(__dirname, 'dist/'),
     filename: 'bundle.js',
   },
   resolveLoader: {
@@ -20,10 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        include: [
-          path.join(__dirname, 'src'),
-          path.join(__dirname, 'example'),
-        ]
+        include: path.join(__dirname, 'src'),
       },
       {
         test: /\.css$/,
@@ -34,8 +30,5 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new ExtractTextPlugin('main.css'),
-    new webpack.ProvidePlugin({
-      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
-    }),
   ],
 };
