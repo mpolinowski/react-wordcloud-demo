@@ -30,6 +30,7 @@ export default class Cloud extends Component {
       return;
     }
     const {
+      fontName,
       fontSizes,
       height,
       topics,
@@ -41,7 +42,7 @@ export default class Cloud extends Component {
       .size([width, height])
       .words(enrichTopics(topics, fontSizes).entities)
       .padding(10)
-      .font('Impact')
+      .font(fontName)
       .text((d) => d.label)
       .fontSize((d) => d.fontSize)
       .random(() => 0.5)
