@@ -94,7 +94,7 @@ WordCloud.propTypes = {
   fontSizes: PropTypes.array,
   height: PropTypes.number,
   isFetching: PropTypes.bool,
-  error: PropTypes.string,
+  error: PropTypes.object,
   topics: PropTypes.array,
   width: PropTypes.number,
 };
