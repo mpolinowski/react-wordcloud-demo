@@ -8,8 +8,8 @@ import React, {
  * @return {ReactElement}       [description]
  */
 const Sidebar = (props) => {
-  const { topic } = props;
-  if (topic === undefined) {
+  const { topic } = props || { topic: null };
+  if (topic === null) {
     return (<div className="wordcloud__sidebar"><span>Select an element!</span></div>);
   }
   return (
