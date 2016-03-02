@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+  PropTypes,
+} from 'react';
 
 /**
  * [description]
@@ -6,8 +8,8 @@ import React from 'react';
  * @return {ReactElement}       [description]
  */
 const Sidebar = (props) => {
-  const { topic } = props || { topic: null };
-  if (topic === null) {
+  const { topic } = props;
+  if (topic === undefined) {
     return (<div className="wordcloud__sidebar"><span>Select an element!</span></div>);
   }
   return (
@@ -25,6 +27,10 @@ const Sidebar = (props) => {
       </p>
     </div>
   );
+};
+
+Sidebar.propTypes = {
+  topic: PropTypes.object,
 };
 
 export default Sidebar;

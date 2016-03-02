@@ -65,7 +65,11 @@ export default class Cloud extends Component {
     } = this.props;
 
     if (this.state.isProcessing) {
-      return (<span>Loading...</span>);
+      return (
+        <div className="wordcloud__cloud">
+          <span >Loading...</span>
+        </div>
+      );
     }
 
     /**

@@ -1,17 +1,23 @@
-import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import expect, {
+  createSpy,
+} from 'expect';
+import {
+  mount,
+  shallow,
+} from 'enzyme';
 import Cloud from '../../src/components/Cloud';
 
+
 function setup(
+  onSelectTopic = () => {},
   fontName = 'Impact',
   fontSizes = [12, 16, 22, 31, 44, 64],
   height = 500,
-  onSelectTopic = () => {},
   topics = [],
   width = 500
 ) {
-  const component = TestUtils.renderIntoDocument(
+  return shallow(
     <Cloud
       fontName={fontName}
       fontSizes={fontSizes}
@@ -21,20 +27,19 @@ function setup(
       width={width}
     />
   );
-  return {
-    component,
-    root_element: TestUtils.findRenderedDOMComponentWithClass(component, 'wordcloud__cloud'),
-    topics_elements: TestUtils.scryRenderedDOMComponentsWithTag(component, 'text'),
-  };
 }
 
-describe('Cloud component', () => {
-  it('should display cloud', () => {
-    const { root_element } = setup();
-    expect(root_element.textContent).toMatch(/^blub/);
+describe('<Cloud />', () => {
+  it('renders', () => {
+    const wrapper = setup();
+    expect(wrapper.is('.wordcloud__cloud')).toEqual(true);
   });
-  it('should handle click on topic', () => {
-    const { root_element, topics_elements } = setup();
-    console.log(topics_elements);
-  });
+
+  /* it('should handle click on topic', () => {
+    const onTopicClick = createSpy();
+    const wrapper = setup(onTopicClick);
+    console.log(wrapper);
+    wrapper.find('.wordcloud__cloud_label').simulate('click');
+    expect(onTopicClick.calls.length).toEqual(1);
+  }); */
 });
