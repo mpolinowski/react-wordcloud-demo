@@ -8,7 +8,7 @@ import React, {
  * @return {ReactElement}       [description]
  */
 const Sidebar = (props) => {
-  const { topic } = props || { topic: null };
+  const { topic } = props;
   if (topic === null) {
     return (
       <div className="wordcloud__container_sidebar">
@@ -21,7 +21,6 @@ const Sidebar = (props) => {
       </div>
     );
   }
-
   return (
     <div className="wordcloud__container_sidebar">
       <div className="wordcloud__sidebar">
@@ -61,6 +60,9 @@ const Sidebar = (props) => {
 
 Sidebar.propTypes = {
   topic: PropTypes.object,
+};
+Sidebar.defaultProps = {
+  topic: null,
 };
 
 export default Sidebar;

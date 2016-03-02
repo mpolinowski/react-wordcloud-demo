@@ -53,18 +53,11 @@ export default class WordCloud extends Component {
       fontName,
       fontSizes,
       height,
-      isFetching,
-      error,
       topics,
       width,
     } = this.props;
 
-    if (isFetching && error === null) {
-      return (<span>Loading...</span>);
-    }
-    if (error) {
-      return (<span>Error.</span>);
-    }
+
     if (topics.length === 0) {
       return (<span>No topics available.</span>);
     }
@@ -93,8 +86,6 @@ WordCloud.propTypes = {
   fontName: PropTypes.string,
   fontSizes: PropTypes.array,
   height: PropTypes.number,
-  isFetching: PropTypes.bool,
-  error: PropTypes.object,
   topics: PropTypes.array,
   width: PropTypes.number,
 };
@@ -103,8 +94,6 @@ WordCloud.defaultProps = {
   fontName: 'Helvetica Neue',
   fontSizes: [13, 16, 20, 26, 35, 49],
   height: 400,
-  isFetching: false,
-  error: null,
   topics: [],
   width: 400,
 };

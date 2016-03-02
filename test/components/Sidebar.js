@@ -16,16 +16,16 @@ const topic = {
 describe('<Sidebar />', () => {
   it('renders', () => {
     const wrapper = shallow(<Sidebar />);
-    expect(wrapper.is('.wordcloud__sidebar')).toEqual(true);
+    expect(wrapper.is('.wordcloud__container_sidebar')).toEqual(true);
   });
 
   it('renders empty', () => {
     const wrapper = shallow(<Sidebar />);
-    expect(wrapper.contains(<span>Select an element!</span>)).toEqual(true);
+    expect(wrapper.contains(<h1 className="wordcloud__sidebar_title">Information</h1>)).toEqual(true);
   });
 
-  it('renders with value', () => {
+  it('renders metatable', () => {
     const wrapper = shallow(<Sidebar topic={topic} />);
-    expect(wrapper.find('.wordcloud__sidebar_element').length).toEqual(3);
+    expect(wrapper.find('.wordcloud__sidebar_metatable').length).toEqual(1);
   });
 });

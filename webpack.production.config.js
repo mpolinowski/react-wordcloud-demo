@@ -29,6 +29,6 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new ExtractTextPlugin('main.css'),
+    new ExtractTextPlugin('wordcloud.css'),
   ],
 };

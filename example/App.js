@@ -50,11 +50,21 @@ class App extends Component {
    * @return {ReactElement} WordCloud component
    */
   render() {
+    const {
+      error,
+      isFetching,
+      topics,
+    } = this.state;
+
+    if (isFetching && error === null) {
+      return (<span>Fetching some information...</span>);
+    }
+    if (error) {
+      return (<span>Something went wrong while fetching the data.</span>);
+    }
     return (
       <WordCloud
-        error={this.state.error}
-        isFetching={this.state.isFetching}
-        topics={this.state.topics}
+        topics={topics}
       />
     );
   }
