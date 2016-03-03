@@ -29,7 +29,7 @@ class App extends Component {
    * @return {[type]} [description]
    */
   componentDidMount() {
-    fetch('https://gist.githubusercontent.com/grahamscott/65b43572ad18c5fbdd87/raw/00a632b43ea6bd36783c16149324139a9e764447/topics.json')
+    fetch('/topics.json')
     .then(response =>
       response.json().then(json => ({ json, response }))
     )
