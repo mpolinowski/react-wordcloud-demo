@@ -74,7 +74,7 @@ export default class Cloud extends Component {
     }
 
     /**
-     * Build class names
+     * Build class names, to highlight the selected component
      * @param  {Object} item  Topic item
      * @return {String}       Class names
      */

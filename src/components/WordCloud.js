@@ -5,7 +5,6 @@ import React, {
 
 /**
  * Import styles
- * Could be splitted into components
  */
 import 'normalize.css';
 import './WordCloud.css';
@@ -13,9 +12,12 @@ import './WordCloud.css';
 /**
  * Import Elements
  */
-import Cloud from '../components/Cloud';
-import Sidebar from '../components/Sidebar';
+import Cloud from './Cloud';
+import Sidebar from './Sidebar';
 
+/**
+ * Compose individual components
+ */
 export default class WordCloud extends Component {
 
   /**

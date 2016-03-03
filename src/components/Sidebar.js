@@ -3,9 +3,9 @@ import React, {
 } from 'react';
 
 /**
- * [description]
+ * Renders Sidebar as functional component
  * @param  {Object} props Topic to display
- * @return {ReactElement}       [description]
+ * @return {ReactElement}
  */
 const Sidebar = (props) => {
   const { topic } = props;
