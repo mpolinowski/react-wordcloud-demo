@@ -21,6 +21,65 @@ Be sure to use the latest version of node.js and npm.
 1. Install: `npm i --save react-wordcloud`
 1. Install peerDependencies, which are declarated in the `package.json`
 
+### Usage / Props
+To render a minimum implementation it is enough to include the WordCloud component:
+
+```javascript
+  <WordCloud
+    topics={topics}
+  />
+```
+
+WordCloud will inherit the components `Cloud` and `Sidebar`. If you want to be more flexible it is possible to load the components individually:
+
+```javascript
+import {
+  WordCloud,
+  Cloud,
+  Sidebar
+} from `react-wordcloud`
+...
+  render() {
+    <Cloud
+      fontName={"Impact"}
+      fontSizes={[13, 16, 20, 26, 35, 49]}
+      height={500}
+      onSelectTopic={() => console.log('Topic selected!')}
+      topics={topics}
+      width={500}
+    />
+  }
+...  
+```
+
+#### WordCloud
+| Prop  | Default | Type | Description |
+| :------------ | :---------------:| :---------------:| ---------------|
+| fontName | `Helvetica Neue` | `string` | Fontname used for the Cloud component |
+| fontSizes | `[13, 16, 20, 26, 35, 49]` | `int[]` | Available fontsizes for the Cloud component |
+| height | `400` | `int` | Height of component |
+| topics | `[]` | `object[]` | Content of `topics.json` |
+| width | `400` | `int` | Width of component |
+
+
+#### Cloud
+| Prop  | Default | Type | Description |
+| :------------ | :---------------:| :---------------:| ---------------|
+| fontName | - | `string` | Fontname used for the Cloud component |
+| fontSizes | - | `int[]` | Available fontsizes for the Cloud component |
+| height | - | `int` | Height of component |
+| onSelectTopic | - | `function` | Eventhandler |
+| selectedTopic | - | `object` | Selected item object |
+| topics | - | `object[]` | Content of `topics.json` |
+| width | - | `int` | Width of component |
+
+
+
+#### Sidebar
+| Prop  | Default | Type | Description |
+| :------------ | :---------------:| :---------------:| ---------------|
+| topic | `null` | `object` | Topic object |
+
 ## Development & example
 To develop the component it is recommend to use the example.
 
@@ -54,34 +113,3 @@ Have a look at the `package.json`.
 
 ### ..not and use sources instead
 It is possible to use the sources directly and bundle them with the application itself. Just copy the contents of `/src`.
-
-
-## Props
-
-### WordCloud
-| Prop  | Default | Type | Description |
-| :------------ | :---------------:| :---------------:| ---------------|
-| fontName | `Helvetica Neue` | `string` | Fontname used for the Cloud component |
-| fontSizes | `[13, 16, 20, 26, 35, 49]` | `int[]` | Available fontsizes for the Cloud component |
-| height | `400` | `int` | Height of component |
-| topics | `[]` | `object[]` | Content of `topics.json` |
-| width | `400` | `int` | Width of component |
-
-
-### Cloud
-| Prop  | Default | Type | Description |
-| :------------ | :---------------:| :---------------:| ---------------|
-| fontName | - | `string` | Fontname used for the Cloud component |
-| fontSizes | - | `int[]` | Available fontsizes for the Cloud component |
-| height | - | `int` | Height of component |
-| onSelectTopic | - | `function` | Eventhandler |
-| selectedTopic | - | `object` | Selected item object |
-| topics | - | `object[]` | Content of `topics.json` |
-| width | - | `int` | Width of component |
-
-
-
-### Sidebar
-| Prop  | Default | Type | Description |
-| :------------ | :---------------:| :---------------:| ---------------|
-| topic | `null` | `object` | Topic object |
