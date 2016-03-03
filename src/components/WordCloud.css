@@ -1,12 +1,23 @@
 /**
- * Usage of REM
+ * 
+ * The style of naming is loosely based on BEM
+ * 
+ */
+
+/**
+ * Prepare root fontSize for the usage of REM-values
  */
 html {
   font-size: 100%;
 }
+
+/**
+ * Take care of the with of the cloud. Currently not responsive
+ */
 body {
   min-width: 500px;
 }
+
 /**
  * Composed components
  */
@@ -50,7 +61,6 @@ body {
  * Cloud
  */
 .wordcloud__cloud {}
-
 .wordcloud__cloud_label {}
 .wordcloud__cloud_label:hover {
   cursor: pointer;

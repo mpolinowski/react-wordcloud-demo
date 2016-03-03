@@ -74,7 +74,7 @@ export default class Cloud extends Component {
     }
 
     /**
-     * Build class names, to highlight the selected component
+     * Build class names to highlight the selected component
      * @param  {Object} item  Topic item
      * @return {String}       Class names
      */
@@ -126,7 +126,6 @@ export default class Cloud extends Component {
   }
 }
 
-
 Cloud.propTypes = {
   fontName: PropTypes.string.isRequired,
   fontSizes: PropTypes.array.isRequired,
@@ -136,6 +135,7 @@ Cloud.propTypes = {
   topics: PropTypes.array.isRequired,
   width: PropTypes.number.isRequired,
 };
+
 Cloud.defaultProps = {
   selectedTopic: null,
 };

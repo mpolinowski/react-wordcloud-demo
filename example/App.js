@@ -26,7 +26,7 @@ class App extends Component {
 
   /**
    * Fetch data after mounting
-   * @return {[type]} [description]
+   * @return {void} Will call setState
    */
   componentDidMount() {
     fetch('/topics.json')

@@ -33,7 +33,6 @@ export default class WordCloud extends Component {
     this.onSelectTopic = this.onSelectTopic.bind(this);
   }
 
-
   /**
    * Click handler
    * @param  {String} topic Whole topic object
@@ -44,7 +43,6 @@ export default class WordCloud extends Component {
       selectedTopic: topic,
     });
   }
-
 
   /**
    * Compose components
@@ -58,7 +56,6 @@ export default class WordCloud extends Component {
       topics,
       width,
     } = this.props;
-
 
     if (topics.length === 0) {
       return (<span>No topics available.</span>);

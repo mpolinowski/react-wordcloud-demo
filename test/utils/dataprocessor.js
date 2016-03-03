@@ -13,8 +13,6 @@ const topicsJson = [
   { volume: 12 },
 ];
 
-const fontSizes = [12, 14, 16, 18, 25, 40];
-
 /**
  * Fake topics.json
  * @type {Array}
@@ -31,6 +29,7 @@ const enrichedTopics = {
   ],
 };
 
+const fontSizes = [12, 14, 16, 18, 25, 40];
 
 describe('utils dataprocessor', () => {
   it('should return minimum and maximum volume', () => {

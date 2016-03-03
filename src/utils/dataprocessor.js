@@ -2,10 +2,6 @@ import _orderBy from 'lodash/orderBy';
 import _map from 'lodash/map';
 
 /**
- * Export needed?
- */
-
-/**
  * Returns min and max volume as an object.
  * @param  {Object[]} topics Structured topics
  * @return {Object} Object with values minVolume and maxVolume

@@ -4,7 +4,7 @@
 ![Dependencies](https://img.shields.io/david/purii/react-wordcloud-demo.svg?style=flat)
 ![devDependencies](https://img.shields.io/david/dev/purii/react-wordcloud-demo.svg?style=flat)
 
-**NOTE: This component is not published. It is just for demo purposes.**
+**NOTE: This component is not published. It is just for demonstration purposes.**
 
 ![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/initialState.png)
 ![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/selectedState.png)
@@ -14,12 +14,14 @@
 * The data is already available. No fetching mechanism needed.
 * The component should be distributable as `commonjs`, `umd` and `es6-module`.
 
+[**Jump to the example!**](http://github.com/Purii/react-wordcloud-demo/master#example)
+
 ## Installation
 Be sure to use the latest version of node.js and npm.
 *Note: Currently the component is not published via npm.*
 
 1. Install: `npm i --save react-wordcloud`
-1. Install peerDependencies, which are declarated in the `package.json`
+1. Install peerDependencies that are listed in `package.json`.
 
 ### Usage / Props
 To run the component with the default props, it is enough to include the WordCloud component with some topics:
@@ -107,7 +109,7 @@ Have a look at the `package.json`.
 1. Run tests: `npm test`
 
 ## Example
-To run the example, similar steps are required as in the [development](https://github.com/Purii/react-wordcloud-demo/master#development):
+To run the example, follow these steps:
 
 1. Install dependencies
   * `npm i`
