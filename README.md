@@ -40,6 +40,9 @@ To develop the component it is recommend to use the example.
 ### Dependencies
 Have a look at the `package.json`.
 
+### Test
+1. Install dependencies: `npm i`
+1. Run tests: `npm test`
 
 ## Build
 ### ..for publishing
