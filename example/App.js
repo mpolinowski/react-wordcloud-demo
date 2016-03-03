@@ -29,7 +29,7 @@ class App extends Component {
    * @return {void} Will call setState
    */
   componentDidMount() {
-    fetch('/topics.json')
+    fetch('topics.json')
     .then(response =>
       response.json().then(json => ({ json, response }))
     )

@@ -4,7 +4,7 @@
 ![Dependencies](https://img.shields.io/david/purii/react-wordcloud-demo.svg?style=flat)
 ![devDependencies](https://img.shields.io/david/dev/purii/react-wordcloud-demo.svg?style=flat)
 
-**NOTE: This component is not published. It is just for demonstration purposes.**
+**NOTE: This component is not published. It is just for [demonstration](http://purii.github.io/react-wordcloud-demo/) purposes.**
 
 ![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/initialState.png)
 ![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/selectedState.png)
