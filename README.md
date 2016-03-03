@@ -25,7 +25,7 @@ Be sure to use the latest version of node.js and npm.
 To develop the component it is recommend to use the example.
 
 1. Install dependencies of component and example: `npm i` inside `/` and `/example`
-1. Start webpack-dev-server inside `/example`. This will bundle the component directly from the sources as `commonjs`: `npm start`
+1. Start webpack-dev-server inside `/example`, which uses the sources if available: `npm start`
 1. Open browser: [http://localhost:8080/](http://localhost:8080/)
 
 ### Structure
