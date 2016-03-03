@@ -4,7 +4,6 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
   entry: './App',
   output: {
     path: path.join(__dirname, 'dist'),
@@ -50,9 +49,6 @@ if (fs.existsSync(src) && fs.existsSync(srcNodeModules)) {
   process.env.BABEL_ENV = 'commonjs'
 
   // Compile component from source. Similar to /webpack.config.js
-  module.exports.plugins.push(
-    new ExtractTextPlugin('wordcloud.css')
-  )
   module.exports.module.loaders.push(
     {
       test: /\.js$/,
@@ -60,4 +56,8 @@ if (fs.existsSync(src) && fs.existsSync(srcNodeModules)) {
       include: src
     }
   )
+}
+
+if (process.env.NODE_ENV  !== 'production') {
+  module.exports.devtool = 'cheap-module-eval-source-map'
 }
