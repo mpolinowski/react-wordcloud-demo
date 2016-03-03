@@ -109,7 +109,7 @@ Have a look at the `package.json`.
 1. Run tests: `npm test`
 
 ## Example
-To run the example, follow these steps:
+To run the example, open [http://purii.github.io/react-wordcloud-demo/](http://purii.github.io/react-wordcloud-demo/) or follow these steps:
 
 1. Install dependencies
   * `npm i`
