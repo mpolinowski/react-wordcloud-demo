@@ -5,7 +5,7 @@ import React, {
 
 import {
   enrichTopics,
-} from '../utils/reducers';
+} from '../utils/dataprocessor';
 
 import d3Cloud from 'd3-cloud';
 
@@ -61,6 +61,7 @@ export default class Cloud extends Component {
       height,
       onSelectTopic,
       selectedTopic,
+      topics,
       width,
     } = this.props;
 
@@ -119,6 +120,7 @@ export default class Cloud extends Component {
             </g>
           </svg>
         </div>
+        {topics.length > this.state.cloudDimensions.length ? <p className="worcloud__hint">Some topics cannot be displayed, because of the available space.</p> : ''}
       </div>
     );
   }

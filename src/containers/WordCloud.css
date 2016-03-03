@@ -67,6 +67,12 @@ body {
 .wordcloud__cloud_label--color-red {
   fill: #F44336;
 }
+.worcloud__hint {
+  margin: .5rem 0;
+  font-size: .85rem;
+  color: #ccc;
+  font-style: italic;
+}
 
 /**
  * Sidebar

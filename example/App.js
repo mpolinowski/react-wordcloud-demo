@@ -3,7 +3,7 @@ import React, {
   Component,
 } from 'react';
 import { render } from 'react-dom';
-import { WordCloud } from '../src/index';
+import { WordCloud } from 'react-wordcloud';
 
 /**
  * Just for demo and development purposes

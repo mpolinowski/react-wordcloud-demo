@@ -1,31 +1,40 @@
-# react-demo-wordcloud
+# react-wordcloud-demo
 
-[![Build Status](https://travis-ci.com/Purii/react-demo-wordcloud.svg?token=qdXLSA5Q7qrhqsnmh1sw&branch=master)](https://travis-ci.com/Purii/react-demo-wordcloud)
-![Dependencies](https://img.shields.io/david/purii/wordcloud.svg?style=flat)
-![devDependencies](https://img.shields.io/david/dev/purii/wordcloud.svg?style=flat)
+[![Build Status](https://travis-ci.com/Purii/react-wordcloud-demo.svg?token=qdXLSA5Q7qrhqsnmh1sw&branch=master)](https://travis-ci.com/Purii/react-wordcloud-demo)
+![Dependencies](https://img.shields.io/david/purii/react-wordcloud-demo.svg?style=flat)
+![devDependencies](https://img.shields.io/david/dev/purii/react-wordcloud-demo.svg?style=flat)
+
+*Note: This component is not published. It is just for demo purposes.*
 
 ## Premise
-* The components should be usable in an existing application. No routing needed.
-* The data is already available. No fetching mechanism needed. Fetching mechanism uses `fetch` with `Promise, which isn't supported by IE.
-* Choose a font for demo purposes.
+* The component should be usable in an existing application. No routing needed.
+* The data is already available. No fetching mechanism needed.
+* The component should be distributable as `commonjs`, `umd` and `es6-module`.
 
 ## Installation
 Be sure to use the latest version of node.js with npm.
+*Note: Currently the component is not published on npm.*
 
+1. Install: `npm i --save react-wordcloud`
+
+## Build
+### ..for publishing
 1. Install dependencies: `npm i`
-1. Start webpack-dev-server: `npm start`
+1. Build bundles for `umd`, `commonjs` and `es6-module`: `npm run prepublish`
+1. The css file will be located in `/dist/wordcloud.css`
+1. Note the peerDependencies
+
+### ..not and use sources instead
+It is possible to use the sources directly and bundle them with the application itself. Just copy the contents of `/src`.
+
+## Development
+To develop the component it is the best to use the example.
+1. Install dependencies of component and example: `npm i` inside `/` and `/example`
+1. Start webpack-dev-server inside `/example`. This will bundle the component directly from the sources as `commonjs`: `npm run start`
 1. Open browser: [http://localhost:8080/](http://localhost:8080/)
-
-## Build for production
-1. Install dependencies: `npm i`
-1. Build bundle: `npm run build`
-1. The bundle as well as other static files are located inside `dist/
 
 ## Dependencies
 Have a look at the `package.json`.
-
-## Outlook
-* The components could be distributed as separated modules through npm.
 
 ## Props
 

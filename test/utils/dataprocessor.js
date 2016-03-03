@@ -1,5 +1,5 @@
 import expect from 'expect';
-import * as reducers from '../../src/utils/reducers';
+import * as dataprocessors from '../../src/utils/dataprocessor';
 
 const topicsJson = [
   { volume: 10 },
@@ -22,10 +22,10 @@ const enrichedTopics = {
 };
 
 
-describe('utils reducers', () => {
+describe('utils dataprocessor', () => {
   it('should return minimum and maximum volume', () => {
     expect(
-      reducers.getMinMaxVolume(topicsJson)
+      dataprocessors.getMinMaxVolume(topicsJson)
     ).toEqual({
       minVolume: 3,
       maxVolume: 999,
@@ -34,13 +34,13 @@ describe('utils reducers', () => {
 
   it('should return the correct font size', () => {
     expect(
-      reducers.getFontSize(3, 999, 3, fontSizes)
+      dataprocessors.getFontSize(3, 999, 3, fontSizes)
     ).toEqual(12);
   });
 
   it('should return an object with enriched topics', () => {
     expect(
-      reducers.enrichTopics(topicsJson, fontSizes)
+      dataprocessors.enrichTopics(topicsJson, fontSizes)
     ).toEqual(enrichedTopics);
   });
 });
