@@ -5,7 +5,6 @@ import expect, {
 } from 'expect';
 import {
   mount,
-  render,
   shallow,
 } from 'enzyme';
 import Cloud from '../../src/components/Cloud';
