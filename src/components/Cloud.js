@@ -67,7 +67,7 @@ export default class Cloud extends Component {
 
     if (this.state.isProcessing) {
       return (
-        <div className="wordcloud__cloud">
+        <div className="wordcloud__container_cloud">
           <span >Loading...</span>
         </div>
       );
@@ -98,7 +98,7 @@ export default class Cloud extends Component {
       }
       return classNames;
     };
-    console.log(this.state.cloudDimensions);
+
     return (
       <div className="wordcloud__container_cloud">
         <div className="wordcloud__cloud">
@@ -135,6 +135,9 @@ Cloud.propTypes = {
   selectedTopic: PropTypes.object,
   topics: PropTypes.array.isRequired,
   width: PropTypes.number.isRequired,
+};
+Cloud.defaultProps = {
+  selectedTopic: null,
 };
 
 export default Cloud;
