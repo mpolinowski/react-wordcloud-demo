@@ -15,7 +15,7 @@
 * The data is already available. No fetching mechanism needed.
 * The component should be distributable as `commonjs`, `umd` and `es6-module`.
 
-[**Jump to the example!**](http://github.com/Purii/react-wordcloud-demo/master#example)
+[**Jump to the example!**](http://github.com/Purii/react-wordcloud-demo#example)
 
 ## Installation
 Be sure to use the latest version of node.js and npm.
