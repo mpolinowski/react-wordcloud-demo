@@ -74,16 +74,18 @@ import {
 | width | - | `int` | Width of component |
 
 
-
 #### Sidebar
 | Prop  | Default | Type | Description |
 | :------------ | :---------------:| :---------------:| ---------------|
 | topic | `null` | `object` | Topic object |
 
-## Development & example
+## Development
 To develop the component it is recommend to use the example.
 
-1. Install dependencies of component and example: `npm i` inside `/` and `/example`
+1. Install dependencies
+  * `npm i`
+  * `cd example`
+  * `npm i`
 1. Start webpack-dev-server inside `/example`, which uses the sources if available: `npm start`
 1. Open browser: [http://localhost:8080/](http://localhost:8080/)
 
@@ -104,12 +106,11 @@ Have a look at the `package.json`.
 1. Install dependencies: `npm i`
 1. Run tests: `npm test`
 
-## Build
-### ..for publishing
+## Example
+To run the example, the same steps are required as in the [development](https://github.com/Purii/react-wordcloud-demo/master#Development).
+
+## Publish
 1. Install dependencies: `npm i`
 1. Build bundles for `umd`, `commonjs` and `es6-module`: `npm run bundle`
 1. The css file will be located in `/dist/wordcloud.min.css`
 1. Note the peerDependencies
-
-### ..not and use sources instead
-It is possible to use the sources directly and bundle them with the application itself. Just copy the contents of `/src`.
