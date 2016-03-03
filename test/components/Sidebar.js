@@ -3,6 +3,10 @@ import expect from 'expect';
 import { shallow } from 'enzyme';
 import Sidebar from '../../src/components/Sidebar';
 
+/**
+ * Fake topics.json
+ * @type {Array}
+ */
 const topic = {
   label: 'Label',
   volume: 500,
@@ -19,9 +23,11 @@ describe('<Sidebar />', () => {
     expect(wrapper.is('.wordcloud__container_sidebar')).toEqual(true);
   });
 
-  it('renders empty', () => {
+  it('renders empty state', () => {
     const wrapper = shallow(<Sidebar />);
-    expect(wrapper.contains(<h1 className="wordcloud__sidebar_title">Information</h1>)).toEqual(true);
+    expect(wrapper.contains(
+      <h1 className="wordcloud__sidebar_title">Information</h1>
+    )).toEqual(true);
   });
 
   it('renders metatable', () => {

@@ -31,12 +31,6 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
       },
-      {
-        test: /\.json$/,
-        loaders: [ 'json' ],
-        exclude: /node_modules/,
-        include: __dirname
-      },
     ]
   },
   postcss: [autoprefixer({ browsers: ['last 3 versions'] })]

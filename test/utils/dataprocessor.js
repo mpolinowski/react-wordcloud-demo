@@ -1,6 +1,10 @@
 import expect from 'expect';
 import * as dataprocessors from '../../src/utils/dataprocessor';
 
+/**
+ * Fake topics.json
+ * @type {Array}
+ */
 const topicsJson = [
   { volume: 10 },
   { volume: 5 },
@@ -8,7 +12,13 @@ const topicsJson = [
   { volume: 3 },
   { volume: 12 },
 ];
+
 const fontSizes = [12, 14, 16, 18, 25, 40];
+
+/**
+ * Fake topics.json
+ * @type {Array}
+ */
 const enrichedTopics = {
   minVolume: 3,
   maxVolume: 999,

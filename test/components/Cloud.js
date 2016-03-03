@@ -1,15 +1,49 @@
 import React from 'react';
 import expect, {
   createSpy,
+  spyOn,
 } from 'expect';
 import {
   mount,
+  render,
   shallow,
 } from 'enzyme';
 import Cloud from '../../src/components/Cloud';
 
 /**
- * Example output of d3-cloud. Generated inside Cloud after componentDidMount
+ * Fake topics.json
+ * @type {Array}
+ */
+const topicsJson = [
+  {
+    id: '1751295897__Berlin',
+    label: 'Berlin',
+    volume: 165,
+    type: 'topic',
+    sentiment: {
+      negative: 3,
+      neutral: 133,
+      positive: 29,
+    },
+    sentimentScore: 65,
+    burst: 13,
+  },
+  {
+    id: '1751295897__DJ',
+    label: 'DJ',
+    volume: 48,
+    type: 'topic',
+    sentiment: {
+      neutral: 46,
+      positive: 2,
+    },
+    sentimentScore: 54,
+    burst: 29,
+  },
+];
+
+/**
+ * Fake output of d3-cloud. Generated inside Cloud after componentDidMount
  * @type {Array}
  */
 const stateDimensions = [
@@ -52,7 +86,7 @@ function getComponentWithDefaultProps(
   fontName = 'Impact',
   fontSizes = [12, 16, 22, 31, 44, 64],
   height = 500,
-  topics = [],
+  topics = topicsJson,
   width = 500
 ) {
   return (
@@ -73,7 +107,12 @@ describe('<Cloud />', () => {
     expect(wrapper.is('.wordcloud__container_cloud')).toEqual(true);
   });
 
-  it('should handle click on topic', () => {
+  it('renders initial loading state', () => {
+    const wrapper = shallow(getComponentWithDefaultProps());
+    expect(wrapper.contains(<span >Loading...</span>)).toEqual(true);
+  });
+
+  it('handles click on topic', () => {
     const onTopicClick = createSpy();
     const wrapper = shallow(getComponentWithDefaultProps(onTopicClick));
 
@@ -84,5 +123,12 @@ describe('<Cloud />', () => {
     });
     wrapper.find('.wordcloud__cloud_label').simulate('click');
     expect(onTopicClick.calls.length).toEqual(1);
+  });
+
+  it('calls componentDidMount', () => {
+    spyOn(Cloud.prototype, 'componentDidMount');
+    mount(getComponentWithDefaultProps());
+    expect(Cloud.prototype.componentDidMount.calls.length).toEqual(1);
+    Cloud.prototype.componentDidMount.restore();
   });
 });
