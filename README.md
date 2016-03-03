@@ -19,6 +19,7 @@ Be sure to use the latest version of node.js and npm.
 *Note: Currently the component is not published via npm.*
 
 1. Install: `npm i --save react-wordcloud`
+1. Install peerDependencies, which are declarated in the `package.json`
 
 ## Development & example
 To develop the component it is recommend to use the example.
