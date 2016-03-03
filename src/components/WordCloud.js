@@ -90,7 +90,7 @@ WordCloud.propTypes = {
 };
 
 WordCloud.defaultProps = {
-  fontName: 'Helvetica Neue',
+  fontName: 'Sans-Serif',
   fontSizes: [13, 16, 20, 26, 35, 49],
   height: 400,
   topics: [],

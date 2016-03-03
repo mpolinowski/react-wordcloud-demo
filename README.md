@@ -58,7 +58,7 @@ import {
 #### WordCloud
 | Prop  | Default | Type | Description |
 | :------------ | :---------------:| :---------------:| ---------------|
-| fontName | `Helvetica Neue` | `string` | Fontname used for the Cloud component |
+| fontName | `Sans-Serif` | `string` | Fontname used for the Cloud component |
 | fontSizes | `[13, 16, 20, 26, 35, 49]` | `int[]` | Available fontsizes for the Cloud component |
 | height | `400` | `int` | Height of component |
 | topics | `[]` | `object[]` | Content of `topics.json` |
