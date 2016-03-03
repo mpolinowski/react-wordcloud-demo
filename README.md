@@ -6,8 +6,9 @@
 
 **NOTE: This component is not published. It is just for [demonstration](http://purii.github.io/react-wordcloud-demo/) purposes.**
 
-![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/initialState.png)
-![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/selectedState.png)
+| | |
+| :------------: | :---------------: |
+| ![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/initialState.png) | ![](https://raw.github.com/Purii/react-wordcloud-demo/master/assets/selectedState.png) |
 
 ## Premise
 * The component should be usable within an existing application. No routing needed.
