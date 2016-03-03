@@ -98,7 +98,7 @@ export default class Cloud extends Component {
       }
       return classNames;
     };
-
+    console.log(this.state.cloudDimensions);
     return (
       <div className="wordcloud__container_cloud">
         <div className="wordcloud__cloud">

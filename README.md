@@ -87,7 +87,7 @@ To develop the component it is recommend to use the example.
   * `cd example`
   * `npm i`
 1. Start webpack-dev-server inside `/example`, which uses the sources if available: `npm start`
-1. Open browser: [http://localhost:8080/](http://localhost:8080/)
+1. Open browser: [http://localhost:8080/webpack-dev-server/](http://localhost:8080/webpack-dev-server/)
 
 ### Structure
 * `/components:`
@@ -107,7 +107,14 @@ Have a look at the `package.json`.
 1. Run tests: `npm test`
 
 ## Example
-To run the example, the same steps are required as in the [development](https://github.com/Purii/react-wordcloud-demo/master#development).
+To run the example, similar steps are required as in the [development](https://github.com/Purii/react-wordcloud-demo/master#development):
+
+1. Install dependencies
+  * `npm i`
+  * `cd example`
+  * `npm i`
+1. Start webpack-dev-server inside `/example`, which uses the sources if available: `npm start`
+1. Open browser: [http://localhost:8080/](http://localhost:8080/)
 
 ## Publish
 1. Install dependencies: `npm i`
