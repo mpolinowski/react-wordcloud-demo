@@ -22,7 +22,7 @@ Be sure to use the latest version of node.js and npm.
 1. Install peerDependencies, which are declarated in the `package.json`
 
 ### Usage / Props
-To render a minimum implementation it is enough to include the WordCloud component:
+To run the component with the default props, it is enough to include the WordCloud component with some topics:
 
 ```javascript
   <WordCloud
@@ -30,7 +30,7 @@ To render a minimum implementation it is enough to include the WordCloud compone
   />
 ```
 
-WordCloud will inherit the components `Cloud` and `Sidebar`. If you want to be more flexible it is possible to load the components individually:
+WordCloud inherits the components `Cloud` and `Sidebar`. If you want to be more flexible it is possible to load that components individually:
 
 ```javascript
 import {
