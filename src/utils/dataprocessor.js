@@ -7,7 +7,7 @@ import _map from 'lodash/map';
  * @return {Object} Object with values minVolume and maxVolume
  */
 export function getMinMaxVolume(topics) {
-  /** Use orderBy. Just on sort process needed **/
+  /** Use orderBy. Just a single sort process needed **/
   const sortedTopics = _orderBy(topics, 'volume');
 
   return {
