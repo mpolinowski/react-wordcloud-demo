@@ -139,5 +139,3 @@ Cloud.propTypes = {
 Cloud.defaultProps = {
   selectedTopic: null,
 };
-
-export default Cloud;
